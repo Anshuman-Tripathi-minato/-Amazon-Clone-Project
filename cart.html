@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone - Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://pngimg.com/uploads/amazon/amazon_PNG25.png" alt="Amazon Logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search Amazon">
+                <button>Search</button>
+            </div>
+            <div class="nav-links">
+                <a href="signin.html">
+                    <span class="icon">&#128100;</span> Sign In
+                </a>
+                <a href="cart.html">
+                    <span class="icon">&#128722;</span> Cart <span id="cart-count">(0)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <p>No items in cart.</p>
+        </div>
+        <h3 id="total-price">Total Price: ₹0</h3>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Help Center</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <p>&copy; 2024 Amazon Clone | Built for Demo Purposes</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to display cart items
+        function updateCart() {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            const totalPriceElement = document.getElementById('total-price');
+            let totalPrice = 0;
+
+            // Clear previous items
+            cartItemsContainer.innerHTML = '';
+
+            if (cartItems.length === 0) {
+                cartItemsContainer.innerHTML = '<p>No items in cart.</p>';
+            } else {
+                cartItems.forEach(item => {
+                    const itemElement = document.createElement('div');
+                    itemElement.classList.add('cart-item');
+                    itemElement.innerHTML = `<img src="${item.image}" alt="${item.name}" class="cart-item-img"><span>${item.name} - ₹${item.price}</span>`;
+                    cartItemsContainer.appendChild(itemElement);
+                    totalPrice += item.price; // Calculate total price
+                });
+            }
+
+            totalPriceElement.textContent = `Total Price: ₹${totalPrice}`; // Update total price
+        }
+
+        // Call the function to update the cart when the page loads
+        updateCart();
+
+        // Checkout function (just a placeholder)
+        function checkout() {
+            alert('Checkout not implemented yet.');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #232F3E;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.deals-section {
+    background-color: #37475A;
+    display: flex;
+    justify-content: space-around; /* Align items evenly */
+    padding: 10px 0; /* Adjust padding for better spacing */
+    color: white;
+}
+
+.deals-section span {
+    cursor: pointer; /* Make it clear these are clickable */
+    transition: color 0.3s; /* Add a transition for hover effect */
+}
+
+.deals-section span:hover {
+    color: #FFD700; /* Change color on hover */
+}
+
+
+.slideshow-container a {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none; /* Prevent text selection */
+    cursor: pointer; /* Indicate that these are clickable */
+}
+
+.slideshow-container .prev {
+    left: 0;
+}
+
+.slideshow-container .next {
+    right: 0;
+}
+
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+.product-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items */
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+    transition: box-shadow 0.3s; /* Add transition for hover effect */
+}
+
+.product-card button{
+    background-color: #FF9900;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.cart-container {
+    margin: 20px;
+}
+
+.cart-container div {
+    margin: 5px 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-item img.cart-item-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.footer-content {
+    background-color: #232F3E;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.signin-container {
+    max-width: 400px;
+    margin:auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.signin-form label {
+    display: block;
+    margin-top: 15px;
+}
+
+.signin-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    background-color: #0056b3;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me input {
+    margin-right: 5px;
+    
+}
+
+.signin-footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signin-footer a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.signin-footer a:hover {
+    text-decoration: underline;
+}
