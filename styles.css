@@ -62,7 +62,10 @@ header {
 .deals-section span:hover {
     color: #FFD700; /* Change color on hover */
 }
-
+.slideshow-container{
+    position: absolute;
+    z-index: -1;
+}
 
 .slideshow-container a {
     position: absolute;
@@ -95,13 +98,17 @@ header {
 }
 
 .product-section {
+    padding-top: 250px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Center the items */
 }
 
 .product-card {
+    background-color: white;
+    
     border: 1px solid #ccc;
+    border-radius: 10px;
     margin: 10px;
     padding: 15px;
     text-align: center;
