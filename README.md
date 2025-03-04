@@ -51,9 +51,7 @@ This project is a prototype of an e-commerce website designed to showcase fronte
   - Simple form-based sign-in page for user login simulation.
   - Contains the same header and footer as the homepage for a consistent experience.
 
-## Live Demo
 
-For a live demonstration, [click here](#). (https://i.imgur.com/wqlYQgW.gif)
 
 ## Tech Stack
 
